@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:paddingLeft="0.5dp"
+    android:paddingRight="0.5dp" 
+    android:layout_marginRight="4dp"
+    android:clickable="true">
+
+    <com.dycode.jepretstory.mediachooser.CustomImageView
+        android:id="@+id/selected_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop" 
+        custom:matchWidthToHeight="true" />
+	
+    <ImageView
+        android:id="@+id/imgRemoveIndicator"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/ic_remove_selected"
+        android:layout_gravity="right|top"
+        />
+</FrameLayout>

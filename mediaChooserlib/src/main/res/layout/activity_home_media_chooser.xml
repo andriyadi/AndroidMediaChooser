@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- <include
+        android:id="@+id/meadiaChooserHeaderBar"       
+        layout="@layout/view_header_bar_media_chooser"
+        android:visibility="gone" >
+    </include> -->
+<!-- android:layout_above="@android:id/tabhost" -->
+
+	<com.google.samples.apps.iosched.ui.widget.SlidingTabLayout
+            android:id="@+id/slidingTabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" 
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" 
+            android:background="@color/theme_light_grey"/>
+	
+	<android.support.v4.view.ViewPager
+	    android:id="@+id/pager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_above="@+id/selectedPhotosContainerFrame"
+	    android:layout_below="@+id/slidingTabs" >
+
+	</android.support.v4.view.ViewPager>
+
+    <FrameLayout
+        android:id="@+id/selectedPhotosContainerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="61dp" 
+        android:layout_alignParentBottom="true" 
+        android:padding="5dp"
+		android:background="@color/theme_light_grey">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false"
+            android:foregroundGravity="left"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp" >
+
+            <LinearLayout
+                android:id="@+id/selectedPhotosContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:animateLayoutChanges="true"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/selectedPhotosEmptyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No media selected"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </FrameLayout>
+    
+    <!-- android:layout_below="@id/meadiaChooserHeaderBar" -->
+    <!-- 
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+            
+            <FrameLayout
+                android:id="@+id/realTabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
+	-->
+</RelativeLayout>
