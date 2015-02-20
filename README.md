@@ -1,7 +1,7 @@
 # AndroidMediaChooser
 It's a library for browsing and choosing photos and videos from Android device's gallery.
 
-![image ](https://raw.githubusercontent.com/andriyadi/AndroidMediaChooser/master/Screenshot.png =300x)
+![image](https://cloud.githubusercontent.com/assets/899126/6305356/3c9cf8fe-b95d-11e4-85e8-d89382050ae3.png =300x)
 
 Key features:
 
